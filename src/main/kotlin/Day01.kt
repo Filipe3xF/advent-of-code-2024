@@ -1,3 +1,4 @@
+import utils.distanceBetween
 import utils.input.Day
 import kotlin.math.abs
 
@@ -15,7 +16,7 @@ fun parseAndSortColumns(input: String): Pair<List<Int>, List<Int>> = input.lines
 }.unzip().let { it.first.sorted() to it.second.sorted() }
 
 fun sumDistancesOfValuesOfEachIndex(columns: Pair<List<Int>, List<Int>>) = columns.first.zip(columns.second).sumOf {
-    abs(it.first - it.second)
+    it.distanceBetween()
 }
 
 fun calculateSimilarityScore(columns: Pair<List<Int>, List<Int>>): Int {

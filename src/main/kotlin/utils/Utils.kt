@@ -1,6 +1,7 @@
 package utils
 
-/**
- * The cleaner shorthand for printing output.
- */
+import kotlin.math.abs
+
 fun Any?.println() = println(this)
+
+fun Pair<Int, Int>.distanceBetween() = abs(first - second)
