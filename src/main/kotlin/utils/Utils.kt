@@ -5,3 +5,5 @@ import kotlin.math.abs
 fun Any?.println() = println(this)
 
 fun Pair<Int, Int>.distanceBetween() = abs(first - second)
+
+fun Collection<Regex>.combine() = joinToString("|") { it.pattern }.toRegex()
